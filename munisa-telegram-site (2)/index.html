@@ -1,0 +1,1671 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0514">
+  <meta name="description" content="Munisa uchun maxsus sayt — Aza tomonidan yozildi.">
+  <title>Munisa uchun ✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Nunito:wght@500;600;700;800&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --night: #0a0514;
+      --night-2: #160b28;
+      --rose: #ff6f9f;
+      --rose-soft: #ff9bbf;
+      --blush: #ffd3e2;
+      --blush-soft: #ffe9f1;
+      --gold: #ffdc92;
+      --gold-soft: #ffe9b8;
+      --lavender: #c9a7ff;
+      --ink: #fdeef5;
+      --mist: #cbb8dc;
+      --f-script: 'Pinyon Script', 'Snell Roundhand', cursive;
+      --f-serif: 'Cormorant Garamond', Georgia, serif;
+      --f-ui: 'Nunito', system-ui, -apple-system, sans-serif;
+      color-scheme: dark;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { height: 100%; scroll-behavior: smooth; }
+    body {
+      min-height: 100%;
+      background-color: var(--night);
+      background-image:
+        radial-gradient(90rem 55rem at 10% -18%, rgba(255, 111, 159, 0.16), transparent 58%),
+        radial-gradient(75rem 48rem at 96% 108%, rgba(140, 90, 255, 0.2), transparent 58%),
+        radial-gradient(45rem 32rem at 50% 45%, rgba(255, 220, 146, 0.05), transparent 70%),
+        linear-gradient(180deg, var(--night-2) 0%, var(--night) 70%, #06030f 100%);
+      background-attachment: fixed;
+      color: var(--ink);
+      font-family: var(--f-ui);
+      padding-block: 18px;
+      padding-left: max(14px, env(safe-area-inset-left));
+      padding-right: max(14px, env(safe-area-inset-right));
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0 0 auto;
+      height: env(safe-area-inset-top);
+      z-index: 50;
+      background: var(--night);
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background: radial-gradient(ellipse at center, transparent 42%, rgba(6, 3, 15, 0.6) 100%);
+    }
+
+    #sky, #fx { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+    #sky { z-index: 0; }
+    #fx { z-index: 40; }
+    #gate, #site { position: relative; z-index: 1; }
+
+    .eyebrow {
+      font: 800 0.7rem/1 var(--f-ui);
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-shadow: 0 0 18px rgba(255, 220, 146, 0.4);
+    }
+    .name {
+      margin: 0;
+      padding: 0.04em 0.12em;
+      font: 400 clamp(3.8rem, 19vw, 7rem)/1.05 var(--f-script);
+      background-image: linear-gradient(108deg, var(--blush-soft), var(--rose) 42%, var(--gold) 88%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 4px 28px rgba(255, 111, 159, 0.4));
+      overflow-wrap: anywhere;
+    }
+    .name.sm { font-size: clamp(2.5rem, 11vw, 4rem); }
+    .lead {
+      margin: 0;
+      font: italic 500 clamp(1.22rem, 4.6vw, 1.55rem)/1.5 var(--f-serif);
+      color: var(--blush);
+      max-width: 28rem;
+    }
+    .sub {
+      margin: 0;
+      max-width: 30rem;
+      font: 600 0.94rem/1.55 var(--f-ui);
+      color: var(--mist);
+    }
+
+    .beat {
+      width: 76px; height: 76px;
+      fill: var(--rose);
+      filter: drop-shadow(0 0 22px rgba(255, 111, 159, 0.75));
+      animation: beat 1.7s ease-in-out infinite;
+    }
+    .beat.big { width: 106px; height: 106px; }
+    .beat.bpm { width: 50px; height: 50px; animation-duration: 0.82s; }
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      14% { transform: scale(1.18); }
+      28% { transform: scale(1); }
+      42% { transform: scale(1.12); }
+      70% { transform: scale(1); }
+    }
+
+    .btn {
+      appearance: none; border: 0; cursor: pointer;
+      touch-action: manipulation;
+      font: 700 1rem/1 var(--f-ui);
+      padding: 0.95rem 1.8rem;
+      border-radius: 999px;
+      color: #2a0b22;
+      background: linear-gradient(135deg, #ff7aa6, #ff9bbf 55%, #ffc2a1);
+      box-shadow: 0 10px 34px rgba(255, 111, 159, 0.48), inset 0 1px 0 rgba(255,255,255,0.35);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 14px 42px rgba(255, 111, 159, 0.58); }
+    .btn:active { transform: translateY(0); }
+    .btn:focus-visible, .nav a:focus-visible, .card:focus-visible, .dream:focus-visible, .music:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+    }
+    .btn.ghost {
+      background: transparent;
+      color: var(--ink);
+      box-shadow: none;
+      border: 1px solid rgba(255, 211, 226, 0.38);
+    }
+    .btn.ghost:hover { background: rgba(255,255,255,0.07); box-shadow: none; }
+    .btn.small { padding: 0.6rem 1.1rem; font-size: 0.85rem; }
+    .btn.yes { transform: scale(var(--grow, 1)); font-size: 1.1rem; padding: 1.05rem 2rem; }
+    .btn.yes:hover { transform: scale(calc(var(--grow, 1) * 1.05)); }
+    .btn.no { transform: scale(var(--shrink, 1)); }
+    .btn.no.flying {
+      position: absolute; margin: 0;
+      transition: left 0.35s cubic-bezier(0.3, 1.3, 0.5, 1), top 0.35s cubic-bezier(0.3, 1.3, 0.5, 1), transform 0.3s;
+    }
+
+    .glass {
+      background: linear-gradient(165deg, rgba(255,255,255,0.1), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255, 211, 226, 0.2);
+      border-radius: 24px;
+      box-shadow: 0 22px 60px rgba(6, 2, 16, 0.55), inset 0 1px 0 rgba(255,255,255,0.07);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+    }
+
+    .gate {
+      min-height: calc(100svh - 36px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+      display: flex; align-items: center; justify-content: center;
+    }
+    .scene {
+      width: 100%; max-width: 34rem;
+      display: flex; flex-direction: column; align-items: center;
+      gap: 1.1rem; text-align: center;
+      animation: rise 1.05s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: none; }
+    }
+    .fine {
+      margin: 0;
+      font: 600 0.8rem/1.5 var(--f-ui);
+      color: var(--mist);
+    }
+
+    .top {
+      position: sticky;
+      top: calc(env(safe-area-inset-top) + 8px);
+      z-index: 30;
+      max-width: 48rem; margin: 0 auto;
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.45rem 0.6rem 0.52rem 1rem;
+      border-radius: 999px;
+      background: rgba(10, 5, 20, 0.84);
+      border: 1px solid rgba(255, 211, 226, 0.15);
+      -webkit-backdrop-filter: blur(16px);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.38);
+    }
+    .brand {
+      font: 400 1.8rem/1 var(--f-script);
+      color: var(--rose);
+      padding-right: 0.12rem;
+    }
+    .nav {
+      display: flex; gap: 0.12rem;
+      overflow-x: auto; min-width: 0; flex: 1;
+      scrollbar-width: none;
+    }
+    .nav::-webkit-scrollbar { display: none; }
+    .nav a {
+      white-space: nowrap;
+      padding: 0.4rem 0.72rem;
+      border-radius: 999px;
+      font: 700 0.8rem/1 var(--f-ui);
+      color: var(--mist);
+      text-decoration: none;
+      transition: color 0.2s, background 0.2s;
+    }
+    .nav a:hover { color: var(--ink); }
+    .nav a[aria-current="true"] {
+      background: rgba(255, 111, 159, 0.22);
+      color: var(--blush);
+    }
+    .progress {
+      position: absolute; left: 1.25rem; right: 1.25rem; bottom: 3px;
+      height: 2px;
+      background: rgba(255, 211, 226, 0.1);
+      border-radius: 2px;
+    }
+    .progress i {
+      display: block; height: 100%; width: 0;
+      background: linear-gradient(90deg, var(--rose), var(--gold));
+      border-radius: 2px;
+      transition: width 0.15s linear;
+    }
+    @media (max-width: 540px) {
+      .brand { display: none; }
+      .top { padding-left: 0.6rem; }
+    }
+
+    .sec {
+      max-width: 40rem; margin: 0 auto;
+      padding-block: clamp(2.6rem, 7.5vw, 4.6rem) 0;
+      scroll-margin-top: 5rem;
+      min-width: 0;
+    }
+    .sec-head {
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center; gap: 0.6rem; margin-bottom: 1.45rem;
+    }
+    .sec-head h2 {
+      margin: 0;
+      font: italic 500 clamp(1.85rem, 6.2vw, 2.7rem)/1.15 var(--f-serif);
+      text-wrap: balance;
+    }
+    .sec-head h2 .script {
+      font-family: var(--f-script);
+      font-style: normal; font-weight: 400;
+      font-size: 1.28em; color: var(--rose);
+    }
+
+    .paper { padding: clamp(1.15rem, 4.3vw, 2.1rem); }
+    .stamp {
+      display: block; margin-bottom: 0.95rem;
+      font: 700 0.7rem/1 var(--f-ui);
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--mist);
+    }
+    .ln {
+      margin: 0 0 0.95rem;
+      min-height: 1.5em;
+      font: italic 500 clamp(1.22rem, 4.3vw, 1.5rem)/1.55 var(--f-serif);
+      color: var(--ink);
+    }
+    .ln.greet {
+      font-family: var(--f-script);
+      font-style: normal; font-weight: 400;
+      font-size: clamp(1.95rem, 7.2vw, 2.5rem);
+      line-height: 1.2; color: var(--blush);
+    }
+    .ln.final {
+      margin-bottom: 0;
+      font-family: var(--f-script);
+      font-style: normal; font-weight: 400;
+      font-size: clamp(2rem, 8vw, 2.9rem);
+      line-height: 1.25; color: var(--rose);
+    }
+    .caret {
+      display: inline-block; width: 2px; height: 1em;
+      margin-left: 2px; vertical-align: -0.12em;
+      background: var(--gold);
+      animation: blink 1s steps(1) infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+    .actions {
+      display: flex; gap: 0.7rem; flex-wrap: wrap;
+      justify-content: center; min-height: 2.9rem; margin-top: 1.15rem;
+    }
+
+    .count {
+      padding: 1.85rem 1.15rem 1.6rem;
+      display: flex; flex-direction: column; align-items: center;
+      gap: 0.8rem; text-align: center;
+    }
+    .big-num {
+      font: 600 clamp(2.9rem, 15vw, 5.2rem)/1 var(--f-serif);
+      font-variant-numeric: lining-nums tabular-nums;
+      color: var(--rose);
+      text-shadow: 0 0 38px rgba(255, 111, 159, 0.5);
+    }
+    .count p {
+      margin: 0; max-width: 26rem;
+      font: italic 500 1.22rem/1.5 var(--f-serif);
+      color: var(--blush);
+    }
+    .meaning {
+      margin-top: 0.95rem;
+      padding: 1.15rem 1.3rem;
+      text-align: center;
+    }
+    .meaning h3 {
+      margin: 0 0 0.4rem;
+      font: 800 0.7rem/1 var(--f-ui);
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .meaning p {
+      margin: 0;
+      font: italic 500 1.22rem/1.5 var(--f-serif);
+      color: var(--ink);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+      gap: 0.8rem;
+    }
+    .card {
+      display: block; position: relative; height: 11rem;
+      padding: 0; border: 0; background: none; color: inherit;
+      font: inherit; cursor: pointer; perspective: 900px;
+      touch-action: manipulation; border-radius: 18px;
+    }
+    .card .inner {
+      position: absolute; inset: 0;
+      transform-style: preserve-3d;
+      transition: transform 0.7s cubic-bezier(0.3, 0.8, 0.3, 1);
+    }
+    .card[aria-pressed="true"] .inner { transform: rotateY(180deg); }
+    .card .face {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 0.6rem; padding: 0.9rem;
+      border-radius: 18px;
+      -webkit-backface-visibility: hidden; backface-visibility: hidden;
+      text-align: center;
+    }
+    .card .front {
+      border: 1px solid rgba(255, 211, 226, 0.26);
+      background: linear-gradient(160deg, rgba(255, 111, 159, 0.25), rgba(140, 90, 255, 0.18));
+    }
+    .card .front svg { width: 30px; height: 30px; fill: var(--rose); }
+    .card .front b {
+      font: 800 0.74rem/1 var(--f-ui);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--blush);
+    }
+    .card .back {
+      transform: rotateY(180deg);
+      border: 1px solid rgba(255, 220, 146, 0.38);
+      background: linear-gradient(160deg, rgba(255, 220, 146, 0.16), rgba(255, 111, 159, 0.18));
+      font: italic 500 1.05rem/1.35 var(--f-serif);
+      color: var(--ink);
+    }
+    .tally {
+      margin: 1rem 0 0;
+      text-align: center;
+      font: 700 0.86rem/1.5 var(--f-ui);
+      color: var(--mist);
+    }
+    .done-note {
+      margin: 0.5rem 0 0;
+      text-align: center;
+      font: italic 500 1.25rem/1.45 var(--f-serif);
+      color: var(--gold);
+    }
+
+    .map { padding: 0.95rem 0.65rem 1.15rem; }
+    .sky-map { display: block; width: 100%; height: auto; max-width: 30rem; margin: 0 auto; }
+    .cline {
+      fill: rgba(255, 111, 159, 0.06);
+      stroke: rgba(255, 211, 226, 0.52);
+      stroke-width: 1.2;
+      stroke-dasharray: 3 5;
+      animation: march 14s linear infinite;
+    }
+    @keyframes march { to { stroke-dashoffset: -80; } }
+    .star { cursor: pointer; outline: none; }
+    .star .hit { fill: transparent; }
+    .star .glow {
+      fill: rgba(255, 220, 146, 0.26);
+      transform-box: fill-box; transform-origin: center;
+      animation: twinkle 2.6s ease-in-out infinite;
+    }
+    .star .core { fill: var(--gold); }
+    .star .ring { fill: none; stroke: var(--rose); stroke-width: 1.5; opacity: 0; }
+    .star.seen .core { fill: var(--rose); }
+    .star.on .ring { opacity: 1; }
+    .star:focus-visible .ring { opacity: 1; stroke: var(--gold); }
+    @keyframes twinkle {
+      0%, 100% { transform: scale(0.8); opacity: 0.5; }
+      50% { transform: scale(1.4); opacity: 1; }
+    }
+    .wish {
+      margin: 0.35rem 0.8rem 0;
+      min-height: 4.3rem;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      font: italic 500 clamp(1.2rem, 4.3vw, 1.45rem)/1.4 var(--f-serif);
+      color: var(--blush);
+    }
+
+    .game { position: relative; overflow: hidden; border-radius: 22px; min-height: 20.5rem; }
+    #game {
+      display: block; width: 100%; height: 20.5rem;
+      touch-action: none; cursor: crosshair;
+      position: relative; z-index: 1;
+    }
+    .game-hud {
+      position: absolute; top: 0.7rem; left: 0.95rem; z-index: 3;
+      font: 700 0.86rem/1 var(--f-ui);
+      color: var(--blush);
+      font-variant-numeric: tabular-nums;
+      pointer-events: none;
+    }
+    .game-cover {
+      position: absolute; inset: 0; z-index: 2;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 0.8rem; padding: 1.15rem; text-align: center;
+      background: rgba(10, 5, 20, 0.72);
+    }
+    .game-cover[hidden] { display: none !important; }
+    .game-cover p {
+      margin: 0; max-width: 24rem;
+      font: italic 500 1.25rem/1.45 var(--f-serif);
+      color: var(--blush);
+    }
+
+    .poem {
+      padding: clamp(1.35rem, 4.6vw, 2.4rem) 1.15rem;
+      text-align: center;
+    }
+    .poem h3 {
+      margin: 0 0 0.3rem;
+      font: 400 clamp(2.2rem, 9vw, 3.2rem)/1.1 var(--f-script);
+      color: var(--gold);
+    }
+    .stanza {
+      margin: 1.2rem 0 0;
+      font: italic 500 clamp(1.18rem, 4.2vw, 1.4rem)/1.75 var(--f-serif);
+      color: var(--ink);
+    }
+
+    .dreams { display: grid; gap: 0.6rem; list-style: none; margin: 0; padding: 0; }
+    .dream {
+      display: flex; align-items: center; gap: 0.85rem;
+      width: 100%; padding: 0.88rem 1rem;
+      text-align: left; border-radius: 16px;
+      cursor: pointer; touch-action: manipulation;
+      color: var(--ink);
+      font: 600 0.98rem/1.4 var(--f-ui);
+      border: 1px solid rgba(255, 211, 226, 0.2);
+      background: rgba(255, 255, 255, 0.045);
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .dream svg {
+      flex: none; width: 25px; height: 25px;
+      fill: none; stroke: var(--rose); stroke-width: 1.8;
+      transition: fill 0.3s, transform 0.3s;
+    }
+    .dream[aria-pressed="true"] {
+      background: rgba(255, 111, 159, 0.17);
+      border-color: rgba(255, 111, 159, 0.48);
+    }
+    .dream[aria-pressed="true"] svg {
+      fill: var(--rose); transform: scale(1.12);
+    }
+    .meter {
+      height: 7px; margin-top: 1.2rem;
+      border-radius: 99px;
+      background: rgba(255,255,255,0.09);
+      overflow: hidden;
+    }
+    .meter i {
+      display: block; height: 100%; width: 0;
+      background: linear-gradient(90deg, var(--rose), var(--gold));
+      transition: width 0.4s;
+    }
+
+    .timeline {
+      display: grid; gap: 0.85rem;
+      list-style: none; margin: 0; padding: 0;
+    }
+    .tl-item {
+      display: flex; gap: 0.95rem; align-items: flex-start;
+      padding: 0.95rem 1.1rem;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 211, 226, 0.16);
+      background: rgba(255,255,255,0.035);
+    }
+    .tl-dot {
+      flex: none; width: 11px; height: 11px; margin-top: 0.42rem;
+      border-radius: 50%;
+      background: var(--rose);
+      box-shadow: 0 0 14px rgba(255, 111, 159, 0.7);
+    }
+    .tl-item strong {
+      display: block;
+      font: 700 0.74rem/1.3 var(--f-ui);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.22rem;
+    }
+    .tl-item p {
+      margin: 0;
+      font: italic 500 1.12rem/1.45 var(--f-serif);
+      color: var(--ink);
+    }
+
+    .promise {
+      padding: 1.55rem 1.25rem;
+      text-align: center;
+    }
+    .promise p {
+      margin: 0 0 0.85rem;
+      font: italic 500 clamp(1.18rem, 4vw, 1.35rem)/1.55 var(--f-serif);
+      color: var(--blush);
+    }
+    .promise .script {
+      font: 400 clamp(2.3rem, 9.5vw, 3.3rem)/1.15 var(--f-script);
+      color: var(--gold);
+    }
+
+    .ask {
+      text-align: center;
+      display: flex; flex-direction: column; align-items: center;
+      gap: 1rem;
+    }
+    .ask-title {
+      margin: 0;
+      font: italic 500 clamp(1.85rem, 7.5vw, 2.9rem)/1.2 var(--f-serif);
+      color: var(--ink);
+      text-wrap: balance;
+    }
+    .ask-title .nm {
+      font-family: var(--f-script);
+      font-style: normal; font-weight: 400;
+      font-size: 1.25em; color: var(--rose);
+    }
+    .arena { position: relative; width: 100%; min-height: 16rem; }
+    .choices {
+      display: flex; gap: 0.95rem; flex-wrap: wrap;
+      justify-content: center; align-items: center;
+      min-height: 5.2rem; width: 100%;
+    }
+    .hint {
+      margin: 0; min-height: 1.45em;
+      font: 600 0.92rem/1.5 var(--f-ui);
+      color: var(--mist);
+    }
+    .thanks {
+      display: flex; flex-direction: column; align-items: center;
+      gap: 0.95rem; text-align: center;
+      animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    }
+    .sign {
+      margin: 0.1rem 0 0;
+      font: italic 500 1.2rem/1.4 var(--f-serif);
+      color: var(--mist);
+    }
+    .sign .script {
+      display: block;
+      font: 400 clamp(2.5rem, 10.5vw, 3.5rem)/1.1 var(--f-script);
+      color: var(--gold);
+    }
+
+    .reply {
+      width: 100%;
+      padding: 1.2rem;
+      display: flex; flex-direction: column;
+      gap: 0.8rem; text-align: left;
+    }
+    .reply label {
+      font: 800 0.7rem/1.3 var(--f-ui);
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .reply textarea {
+      width: 100%; min-height: 5.4rem; resize: vertical;
+      padding: 0.75rem 0.95rem;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 211, 226, 0.28);
+      background: rgba(6, 3, 14, 0.55);
+      color: var(--ink);
+      font: italic 500 1.12rem/1.5 var(--f-serif);
+    }
+    .reply textarea:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 2px;
+    }
+    .reply .row {
+      display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap;
+    }
+    .reply .note {
+      font: 600 0.86rem/1.4 var(--f-ui);
+      color: var(--mist);
+    }
+    .form-success {
+      text-align: center;
+      padding: 1.15rem;
+      font: italic 500 1.25rem/1.5 var(--f-serif);
+      color: var(--gold);
+    }
+
+    .foot {
+      max-width: 40rem; margin: 0 auto;
+      padding: 3.6rem 0 1.3rem;
+      display: flex; flex-direction: column; align-items: center;
+      gap: 0.8rem; text-align: center;
+    }
+    .foot .script {
+      font: 400 2.4rem/1.1 var(--f-script);
+      color: var(--gold);
+    }
+
+    .music {
+      position: fixed; z-index: 45;
+      right: calc(14px + env(safe-area-inset-right));
+      bottom: calc(14px + env(safe-area-inset-bottom));
+      display: flex; align-items: center; gap: 0.42rem;
+      padding: 0.62rem 0.9rem;
+      border-radius: 999px;
+      cursor: pointer;
+      font: 700 0.8rem/1 var(--f-ui);
+      color: var(--ink);
+      background: rgba(10, 5, 20, 0.9);
+      border: 1px solid rgba(255, 211, 226, 0.26);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      touch-action: manipulation;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.42);
+    }
+    .music svg { width: 16px; height: 16px; fill: var(--gold); }
+    .music[aria-pressed="false"] svg { fill: var(--mist); opacity: 0.7; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <canvas id="fx" aria-hidden="true"></canvas>
+
+  <!-- Gate -->
+  <section class="gate" id="gate">
+    <div class="scene">
+      <svg class="beat" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+      <span class="eyebrow">Sen uchun</span>
+      <h1 class="name">Munisa</h1>
+      <p class="lead">Senga aytmoqchi bo'lgan bir gapim bor. Uni yetkazish uchun butun bir sayt yasadim.</p>
+      <button class="btn" id="open" type="button">Xatni ochish</button>
+      <p class="fine">Yumshoq musiqa yoqiladi. Xohlasangiz, pastdagi tugma bilan o'chirib qo'yishingiz mumkin.</p>
+    </div>
+  </section>
+
+  <!-- Site -->
+  <div id="site" hidden>
+    <header class="top">
+      <span class="brand" aria-hidden="true">Munisa</span>
+      <nav class="nav" id="nav" aria-label="Bo'limlar">
+        <a href="#xat" data-go="xat">Xat</a>
+        <a href="#yurak" data-go="yurak">Yurak</a>
+        <a href="#sabablar" data-go="sabablar">Sabablar</a>
+        <a href="#yulduz" data-go="yulduz">Yulduzlar</a>
+        <a href="#oyin" data-go="oyin">O'yin</a>
+        <a href="#sher" data-go="sher">She'r</a>
+        <a href="#orzu" data-go="orzu">Orzular</a>
+        <a href="#xotiralar" data-go="xotiralar">Xotiralar</a>
+        <a href="#savol" data-go="savol">Savol</a>
+      </nav>
+      <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+    </header>
+
+    <main>
+      <!-- Letter -->
+      <section class="sec" id="xat">
+        <div class="sec-head">
+          <span class="eyebrow">Birinchi bo'lim</span>
+          <h2>Senga xat</h2>
+        </div>
+        <article class="paper glass" aria-label="Munisaga xat">
+          <time class="stamp" datetime="2026-11-23">23-noyabr, 2026</time>
+          <div id="lines"></div>
+        </article>
+        <div class="actions">
+          <button class="btn ghost small" id="fast" type="button">Tezroq o'qish</button>
+          <button class="btn" id="toNext" type="button" hidden>Davom etish</button>
+        </div>
+      </section>
+
+      <!-- Heartbeat -->
+      <section class="sec" id="yurak">
+        <div class="sec-head">
+          <span class="eyebrow">Yurak soati</span>
+          <h2>Yuragim hisobda</h2>
+        </div>
+        <div class="count glass">
+          <svg class="beat bpm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          <div class="big-num" id="beats" aria-live="off">0</div>
+          <p>Bu saytni ochganingdan beri yuragim shuncha marta urdi. Har urishida bitta ism bor: Munisa.</p>
+        </div>
+        <div class="meaning glass">
+          <h3>Ismingizning ma'nosi</h3>
+          <p>Munisa so'zi "munis" dan olingan: mehribon, yoqimli, hamdam. Ismingning o'zi ham seni tasvirlab turibdi.</p>
+        </div>
+      </section>
+
+      <!-- Reasons -->
+      <section class="sec" id="sabablar">
+        <div class="sec-head">
+          <span class="eyebrow">Sabablar</span>
+          <h2>Seni nega sevaman</h2>
+          <p class="sub">Kartani bosing va sababni o'qing.</p>
+        </div>
+        <div class="cards" id="cards"></div>
+        <p class="tally" id="tally">0 / 8 sabab ochildi</p>
+        <p class="done-note" id="reasonDone" hidden>Sabablar tugamaydi. Men ularni hali ham topib yuribman.</p>
+      </section>
+
+      <!-- Constellation -->
+      <section class="sec" id="yulduz">
+        <div class="sec-head">
+          <span class="eyebrow">Yulduzlar xaritasi</span>
+          <h2>Osmondagi yangi turkum: <span class="script">Munisa</span></h2>
+          <p class="sub">Uni men kashf qildim. Har bir yulduzni bosing, senga atalgan tilakni o'qing.</p>
+        </div>
+        <div class="map glass">
+          <div id="map"></div>
+          <p class="wish" id="wishText" aria-live="polite">Biror yulduzni tanlang.</p>
+          <p class="tally" id="wishCount">0 / 12 tilak o'qildi</p>
+        </div>
+      </section>
+
+      <!-- Game -->
+      <section class="sec" id="oyin">
+        <div class="sec-head">
+          <span class="eyebrow">O'yin</span>
+          <h2>Yuraklarni tuting</h2>
+          <p class="sub">Tushayotgan yuraklarni bosing. O'ntasini tutsangiz, bir sir ochiladi.</p>
+        </div>
+        <div class="game glass">
+          <canvas id="game" aria-label="Yurak tutish o'yini"></canvas>
+          <div class="game-hud" id="gameHud" aria-live="polite">Tutilgan: 0 / 10</div>
+          <div class="game-cover" id="gameCover">
+            <p id="gameMsg">Tayyormisan?</p>
+            <button class="btn" id="gameStart" type="button">Boshlash</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Poem -->
+      <section class="sec" id="sher">
+        <div class="sec-head">
+          <span class="eyebrow">She'r</span>
+        </div>
+        <div class="poem glass">
+          <h3>Sen uchun</h3>
+          <p class="stanza">Tunlar uzun, yulduzlar jim,<br>Ular ham senga qarab turar.<br>Sen yo'qsang, dunyo bir oz tim,<br>Sen kelsang, hamma narsa o'ngar.</p>
+          <p class="stanza">Menga na boylik, na taxt kerak,<br>Bir og'iz so'zing menga yetadi.<br>Sen bor joyda, biling, yurak<br>Bahor bo'lib qaytib turadi.</p>
+          <p class="stanza">Agar yulduzlar so'zlasa edi,<br>Ular seni eslab turardi.<br>Men esa har kecha tilak tilayman:<br>Sen baxtli, tinch va sevilgan bo'l.</p>
+        </div>
+      </section>
+
+      <!-- Dreams -->
+      <section class="sec" id="orzu">
+        <div class="sec-head">
+          <span class="eyebrow">Orzular</span>
+          <h2>Birga qilmoqchi bo'lganlarim</h2>
+          <p class="sub">Senga ham yoqqanlarini belgilang.</p>
+        </div>
+        <ul class="dreams" id="dreams"></ul>
+        <div class="meter" aria-hidden="true"><i id="meterBar"></i></div>
+        <p class="tally" id="dreamTally">0 / 8 orzu birga</p>
+        <p class="done-note" id="dreamDone" hidden>Hammasi birga. Demak, qaror topdik.</p>
+      </section>
+
+      <!-- Memories -->
+      <section class="sec" id="xotiralar">
+        <div class="sec-head">
+          <span class="eyebrow">Kelajak xotiralari</span>
+          <h2>Birga yozmoqchi bo'lgan sahifalar</h2>
+          <p class="sub">Hali yozilmagan, lekin yuragimda allaqachon bor.</p>
+        </div>
+        <ul class="timeline">
+          <li class="tl-item glass">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div>
+              <strong>Birinchi uchrashuv</strong>
+              <p>Qo'rqinchli, lekin eng chiroyli kun. Ko'zlaringizni birinchi marta yaqindan ko'raman.</p>
+            </div>
+          </li>
+          <li class="tl-item glass">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div>
+              <strong>Birinchi qahva</strong>
+              <p>Oddiy stolda, oddiy suhbat. Lekin ichimda bayram.</p>
+            </div>
+          </li>
+          <li class="tl-item glass">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div>
+              <strong>Yomg'irli kecha</strong>
+              <p>Shoshmasdan yuramiz. Sen yonimdasan — boshqa hech narsa kerak emas.</p>
+            </div>
+          </li>
+          <li class="tl-item glass">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div>
+              <strong>Har yil shu kun</strong>
+              <p>Bu saytni ochib, "esingizdami?" deb kulamiz. Va yana sevamiz.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Promise -->
+      <section class="sec" id="vaada">
+        <div class="promise glass">
+          <p>Senga va'da beraman:</p>
+          <p class="script">Seni hech qachon yolg'iz qoldirmayman.</p>
+          <p>Qiyin kunlaringda yoningda bo'laman. Xursand kunlaringda esa eng baland ovoz bilan kulaman.</p>
+        </div>
+      </section>
+
+      <!-- The question -->
+      <section class="sec" id="savol">
+        <div class="ask">
+          <span class="eyebrow">Eng muhim savol</span>
+          <h2 class="ask-title">Sen ham meni sevasanmi, <span class="nm">Munisa</span>?</h2>
+          <div class="arena" id="arena">
+            <div class="choices">
+              <button class="btn yes" id="ya" type="button">Ha, sevaman</button>
+              <button class="btn ghost no" id="no" type="button">Yo'q</button>
+            </div>
+          </div>
+          <p class="hint" id="hint" aria-live="polite">Javobingizni yuragingizdan tanlang.</p>
+
+          <div class="thanks" id="thanks" hidden>
+            <svg class="beat big" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <h2 class="name sm">Rahmat, Munisa</h2>
+            <p class="lead">Shu daqiqada dunyodagi eng baxtli odam menman.</p>
+            <p class="lead">Seni hech qachon yolg'iz qoldirmayman. Va'da.</p>
+            <p class="lead">Endi bir-birimizni ko'radigan kunni sabrsizlik bilan kutaman.</p>
+            <p class="sign">Seni sevuvchi<span class="script">Aza</span></p>
+
+            <form class="reply glass" name="munisa-reply" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="replyForm">
+              <input type="hidden" name="form-name" value="munisa-reply">
+              <p hidden>
+                <label>Don’t fill this out: <input name="bot-field"></label>
+              </p>
+
+              <label for="reply">Aza'ga javobingiz</label>
+              <textarea id="reply" name="message">Ha, Aza. Men ham Sizni sevaman.</textarea>
+
+              <div class="row">
+                <button class="btn small" type="submit" id="submitBtn">Yuborish</button>
+                <button class="btn ghost small" type="button" id="copy">Nusxalash</button>
+                <span class="note" id="copied">Yuboring yoki nusxalab Telegramda yuboring.</span>
+              </div>
+            </form>
+
+            <div class="form-success glass" id="formSuccess" hidden>
+              Javobingiz yetib bordi ❤️<br>
+              Aza tez orada o'qiydi. Rahmat, Munisa.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <span class="script">Aza</span>
+      <p class="fine">Sevgi bilan yozildi. 23-noyabr, 2026.</p>
+      <button class="btn ghost small" id="toTop" type="button">Boshiga qaytish</button>
+    </footer>
+  </div>
+
+  <button class="music" id="music" type="button" aria-pressed="false" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg>
+    <span id="musicLbl">Musiqa</span>
+  </button>
+
+  <script>
+  (function () {
+    "use strict";
+    var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+    function $(s, r) { return (r || document).querySelector(s); }
+    function $$(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+    function rand(a, b) { return a + Math.random() * (b - a); }
+    function pick(arr) { return arr[(Math.random() * arr.length) | 0]; }
+    var PALETTE = ["#ff6f9f", "#ffb3cc", "#ffd3e2", "#ffdc92", "#c9a7ff", "#ff9bbf"];
+    var siteOpen = false;
+
+    /* Sky & FX */
+    var sky = $("#sky"), sctx = sky.getContext("2d"), fx = $("#fx"), fctx = fx.getContext("2d");
+    var W = 0, H = 0, stars = [], hearts = [], bits = [], shoot = null;
+    var party = false, last = 0, nextShoot = 2500, lastTrail = 0;
+
+    function seedStars() {
+      stars = [];
+      var n = Math.min(230, Math.round((W * H) / 7200));
+      for (var i = 0; i < n; i++) {
+        stars.push({
+          x: rand(0, W), y: rand(0, H),
+          r: rand(0.4, 1.7),
+          sp: rand(0.5, 2.4),
+          ph: rand(0, 6.28),
+          c: pick(["#ffffff", "#ffe9f2", "#ffeeba", "#e8d4ff"])
+        });
+      }
+    }
+    function drawStars(t) {
+      for (var i = 0; i < stars.length; i++) {
+        var s = stars[i];
+        sctx.globalAlpha = 0.28 + 0.62 * Math.abs(Math.sin((t / 1000) * s.sp + s.ph));
+        sctx.fillStyle = s.c;
+        sctx.beginPath();
+        sctx.arc(s.x, s.y, s.r, 0, 6.283);
+        sctx.fill();
+      }
+      sctx.globalAlpha = 1;
+    }
+    function sizeCanvas(c, ctx) {
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      c.width = Math.round(W * dpr);
+      c.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    function resize() {
+      W = window.innerWidth; H = window.innerHeight;
+      sizeCanvas(sky, sctx); sizeCanvas(fx, fctx);
+      seedStars();
+      if (reduce) { sctx.clearRect(0, 0, W, H); drawStars(0); }
+      gSize();
+    }
+    function heartPath(ctx, x, y, s) {
+      y -= s * 0.5;
+      ctx.beginPath();
+      ctx.moveTo(x, y + s * 0.3);
+      ctx.bezierCurveTo(x, y - s * 0.1, x - s * 0.6, y - s * 0.1, x - s * 0.6, y + s * 0.3);
+      ctx.bezierCurveTo(x - s * 0.6, y + s * 0.65, x - s * 0.1, y + s * 0.85, x, y + s * 1.05);
+      ctx.bezierCurveTo(x + s * 0.1, y + s * 0.85, x + s * 0.6, y + s * 0.65, x + s * 0.6, y + s * 0.3);
+      ctx.bezierCurveTo(x + s * 0.6, y - s * 0.1, x, y - s * 0.1, x, y + s * 0.3);
+      ctx.closePath();
+    }
+    function newHeart(initial, spread) {
+      return {
+        x: rand(0, W),
+        y: initial ? rand(0, H) : H + rand(10, spread || 80),
+        s: rand(9, 22),
+        vy: rand(20, 52),
+        sw: rand(7, 24),
+        ph: rand(0, 6.28),
+        a: rand(0.18, 0.48),
+        c: pick(PALETTE)
+      };
+    }
+    function heartTarget() { return party ? 62 : (W < 600 ? 11 : 20); }
+
+    function burst(cx, cy, n) {
+      for (var i = 0; i < n && bits.length < 460; i++) {
+        var ang = rand(0, 6.283), sp = rand(180, 700);
+        bits.push({
+          x: cx, y: cy,
+          vx: Math.cos(ang) * sp, vy: Math.sin(ang) * sp - 150,
+          g: 250, rot: rand(0, 6.28), vr: rand(-6, 6),
+          s: rand(7, 19), c: pick(PALETTE),
+          life: rand(2.1, 3.8), heart: Math.random() < 0.72
+        });
+      }
+    }
+    function trail(x, y) {
+      if (bits.length > 460) return;
+      bits.push({
+        x: x, y: y,
+        vx: rand(-22, 22), vy: rand(-55, -22),
+        g: -8, rot: 0, vr: 0,
+        s: rand(5, 10), c: pick(PALETTE),
+        life: 1.05, heart: true
+      });
+    }
+    function celebrate() {
+      party = true;
+      chime();
+      if (reduce) return;
+      burst(W / 2, H * 0.4, 145);
+      for (var k = 1; k <= 7; k++) {
+        (function (k) {
+          setTimeout(function () {
+            burst(rand(0.12, 0.88) * W, rand(0.15, 0.48) * H, 55);
+          }, k * 650);
+        })(k);
+      }
+    }
+
+    function frame(t) {
+      var dt = Math.min(0.05, (t - last) / 1000 || 0); last = t;
+      sctx.clearRect(0, 0, W, H);
+      drawStars(t);
+
+      nextShoot -= dt * 1000;
+      if (!shoot && nextShoot <= 0) {
+        shoot = {
+          x: rand(0.2, 0.9) * W, y: rand(0, 0.32) * H,
+          vx: -rand(480, 740), vy: rand(200, 320), life: 0.9
+        };
+        nextShoot = rand(4800, 8800);
+      }
+      if (shoot) {
+        shoot.x += shoot.vx * dt;
+        shoot.y += shoot.vy * dt;
+        shoot.life -= dt;
+        var g = sctx.createLinearGradient(shoot.x, shoot.y, shoot.x - shoot.vx * 0.12, shoot.y - shoot.vy * 0.12);
+        g.addColorStop(0, "rgba(255,255,255,0.95)");
+        g.addColorStop(1, "rgba(255,255,255,0)");
+        sctx.globalAlpha = Math.max(0, Math.min(1, shoot.life / 0.4));
+        sctx.strokeStyle = g;
+        sctx.lineWidth = 2.2;
+        sctx.beginPath();
+        sctx.moveTo(shoot.x, shoot.y);
+        sctx.lineTo(shoot.x - shoot.vx * 0.12, shoot.y - shoot.vy * 0.12);
+        sctx.stroke();
+        sctx.globalAlpha = 1;
+        if (shoot.life <= 0) shoot = null;
+      }
+
+      var target = heartTarget();
+      while (hearts.length < target) hearts.push(newHeart(hearts.length < 9 && !party, party ? 520 : 85));
+      sctx.shadowBlur = 14;
+      for (var i = hearts.length - 1; i >= 0; i--) {
+        var h = hearts[i];
+        h.y -= h.vy * dt;
+        if (h.y < -45) {
+          if (hearts.length > target) { hearts.splice(i, 1); continue; }
+          hearts[i] = newHeart(false, party ? 520 : 85);
+          continue;
+        }
+        sctx.globalAlpha = h.a;
+        sctx.fillStyle = h.c;
+        sctx.shadowColor = h.c;
+        heartPath(sctx, h.x + Math.sin((t / 1000) * 0.75 + h.ph) * h.sw, h.y, h.s);
+        sctx.fill();
+      }
+      sctx.shadowBlur = 0;
+      sctx.globalAlpha = 1;
+
+      fctx.clearRect(0, 0, W, H);
+      for (var j = bits.length - 1; j >= 0; j--) {
+        var b = bits[j];
+        b.vy += b.g * dt;
+        b.vx *= 0.991;
+        b.x += b.vx * dt;
+        b.y += b.vy * dt;
+        b.rot += b.vr * dt;
+        b.life -= dt;
+        if (b.life <= 0 || b.y > H + 45 || b.y < -45) { bits.splice(j, 1); continue; }
+        fctx.globalAlpha = Math.min(1, b.life / 0.55);
+        fctx.fillStyle = b.c;
+        fctx.save();
+        fctx.translate(b.x, b.y);
+        fctx.rotate(b.rot);
+        if (b.heart) { heartPath(fctx, 0, 0, b.s); fctx.fill(); }
+        else { fctx.fillRect(-b.s / 2, -b.s / 4, b.s, b.s / 2); }
+        fctx.restore();
+      }
+      fctx.globalAlpha = 1;
+      requestAnimationFrame(frame);
+    }
+
+    window.addEventListener("pointermove", function (e) {
+      if (reduce || !siteOpen) return;
+      var now = Date.now();
+      if (now - lastTrail < 42) return;
+      lastTrail = now;
+      trail(e.clientX, e.clientY);
+    }, { passive: true });
+
+    /* Music */
+    var ac = null, master = null, musicTimer = null, mStep = 0, musicOn = false;
+    var CH = [
+      [261.63, 329.63, 392, 523.25],
+      [220, 261.63, 329.63, 440],
+      [174.61, 220, 261.63, 349.23],
+      [196, 246.94, 293.66, 392]
+    ];
+    var PAT = [0, 1, 2, 3, 2, 1, 2, 1];
+    var musicBtn = $("#music");
+
+    function initAudio() {
+      if (ac) return true;
+      var AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return false;
+      try {
+        ac = new AC();
+        master = ac.createGain();
+        master.gain.value = 0.85;
+        var d = ac.createDelay(1.0);
+        d.delayTime.value = 0.36;
+        var fb = ac.createGain();
+        fb.gain.value = 0.32;
+        master.connect(ac.destination);
+        master.connect(d);
+        d.connect(fb);
+        fb.connect(d);
+        d.connect(ac.destination);
+        return true;
+      } catch (err) { ac = null; return false; }
+    }
+    function ping(f, vol, dur) {
+      if (!ac) return;
+      var t = ac.currentTime + 0.025;
+      var o = ac.createOscillator(), o2 = ac.createOscillator();
+      var g = ac.createGain(), g2 = ac.createGain();
+      o.type = "sine"; o2.type = "sine";
+      o.frequency.value = f;
+      o2.frequency.value = f * 2.005;
+      g2.gain.value = 0.22;
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.exponentialRampToValueAtTime(vol, t + 0.012);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      o.connect(g); o2.connect(g2); g2.connect(g); g.connect(master);
+      o.start(t); o2.start(t);
+      o.stop(t + dur + 0.04); o2.stop(t + dur + 0.04);
+    }
+    function musicTick() {
+      var ch = CH[Math.floor(mStep / 8) % 4], i = mStep % 8;
+      ping(ch[PAT[i]], 0.048, 1.55);
+      if (i === 0) ping(ch[0] / 2, 0.055, 2.3);
+      if (i % 4 === 2 && Math.random() < 0.45) ping(ch[(Math.random() * 4) | 0] * 2, 0.022, 1.35);
+      mStep++;
+    }
+    function chime() {
+      if (!ac || !musicOn) return;
+      [523.25, 659.25, 783.99, 1046.5].forEach(function (f, i) {
+        setTimeout(function () { ping(f, 0.055, 2.1); }, i * 150);
+      });
+    }
+    function paintMusic() {
+      musicBtn.setAttribute("aria-pressed", musicOn ? "true" : "false");
+      $("#musicLbl").textContent = musicOn ? "Musiqa: yoqiq" : "Musiqa: o'chiq";
+    }
+    function setMusic(on) {
+      musicOn = on;
+      clearInterval(musicTimer);
+      if (on) {
+        if (!initAudio()) { musicOn = false; }
+        else {
+          if (ac.resume) ac.resume();
+          musicTimer = setInterval(musicTick, 460);
+        }
+      }
+      paintMusic();
+    }
+    musicBtn.addEventListener("click", function () { setMusic(!musicOn); });
+    document.addEventListener("visibilitychange", function () {
+      clearInterval(musicTimer);
+      if (!document.hidden && musicOn) musicTimer = setInterval(musicTick, 460);
+    });
+
+    /* Gate -> site */
+    var t0 = 0, counterTimer = null;
+    function fmt(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, " "); }
+    $("#open").addEventListener("click", function () {
+      $("#gate").hidden = true;
+      $("#site").hidden = false;
+      musicBtn.hidden = false;
+      siteOpen = true;
+      window.scrollTo(0, 0);
+      t0 = Date.now();
+      counterTimer = setInterval(function () {
+        $("#beats").textContent = fmt(Math.floor(((Date.now() - t0) / 1000) * 1.2));
+      }, 250);
+      setMusic(true);
+      gSize();
+      typeLetter();
+    });
+
+    /* Nav */
+    var nav = $("#nav");
+    $$("[data-go]").forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        var t = document.getElementById(a.getAttribute("data-go"));
+        if (t) t.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+      });
+    });
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          $$("a", nav).forEach(function (a) {
+            var on = a.getAttribute("data-go") === e.target.id;
+            if (on) {
+              a.setAttribute("aria-current", "true");
+              nav.scrollLeft = a.offsetLeft - nav.clientWidth / 2 + a.offsetWidth / 2;
+            } else a.removeAttribute("aria-current");
+          });
+        });
+      }, { rootMargin: "-40% 0px -55% 0px" });
+      $$(".sec").forEach(function (s) { io.observe(s); });
+    }
+    var bar = $("#bar");
+    window.addEventListener("scroll", function () {
+      var de = document.documentElement;
+      var max = de.scrollHeight - window.innerHeight;
+      bar.style.width = (max > 0 ? Math.min(100, (window.scrollY / max) * 100) : 0) + "%";
+    }, { passive: true });
+    $("#toTop").addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+    });
+
+    /* Letter — "sen" tilida */
+    var LINES = [
+      { t: "Assalomu alaykum, Munisa.", cls: "greet" },
+      { t: "Bu sahifani faqat sen uchun yasadim. Har bir qatorini, har bir yulduzini o'ylab qo'ydim." },
+      { t: "Anchadan beri senga bir gap aytmoqchi edim. Hali ko'rishmagan bo'lsak ham, har safar yozishganimizda yuragim joyidan qo'zg'alardi. Aytishga tilim aylanmadi, shuning uchun yuragimni shu yerga qo'yib qo'ydim." },
+      { t: "Sening xabaring kelsa, kunim yorishib ketadi. Orada masofa bo'lsa ham, sen yonimda ekaningni his qilaman." },
+      { t: "Osmonga qarasam, yulduzlarning hammasidan ko'ra seni ko'proq o'ylayman." },
+      { t: "Ko'p va'da berib gapirmayman. Faqat shuni bilib qo'y: sen xursand bo'lsang, men ham xursandman, sen charchasang, men bir xabar masofasidaman." },
+      { t: "Seni ko'rmasdan turib ham sevib qolish mumkin ekan. Buni sendan o'rgandim." },
+      { t: "Sen bilan oddiy kun ham bayramga aylanadi." },
+      { t: "Men seni sevaman, Munisa.", cls: "final" }
+    ];
+    var skip = reduce, started = false;
+    var box = $("#lines"), fastBtn = $("#fast"), nextBtn = $("#toNext");
+    function wait(ms) { return new Promise(function (r) { setTimeout(r, skip ? 0 : ms); }); }
+    function keepInView(el) {
+      var r = el.getBoundingClientRect();
+      if (r.bottom > window.innerHeight - 24) {
+        window.scrollBy({ top: r.bottom - window.innerHeight + 90, behavior: "smooth" });
+      }
+    }
+    async function typeLetter() {
+      if (started) return;
+      started = true;
+      var caret = document.createElement("span");
+      caret.className = "caret";
+      for (var n = 0; n < LINES.length; n++) {
+        var L = LINES[n];
+        var p = document.createElement("p");
+        p.className = "ln " + (L.cls || "");
+        box.appendChild(p);
+        for (var i = 1; i <= L.t.length; i++) {
+          if (skip) i = L.t.length;
+          p.textContent = L.t.slice(0, i);
+          p.appendChild(caret);
+          if (i % 14 === 0 || i === L.t.length) keepInView(p);
+          if (!skip) await wait(24 + (/[,.]/.test(L.t.charAt(i - 1)) ? 170 : 0));
+        }
+        await wait(600);
+      }
+      caret.remove();
+      fastBtn.hidden = true;
+      nextBtn.hidden = false;
+    }
+    fastBtn.addEventListener("click", function () { skip = true; fastBtn.hidden = true; });
+    nextBtn.addEventListener("click", function () {
+      $("#yurak").scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+    });
+
+    /* Reasons */
+    var REASONS = [
+      "Yozgan so'zlaring yuzimga tabassum olib keladi.",
+      "Xabaring kelishi bilan kunim o'zgarib ketadi.",
+      "Mehring. Sen sezmasang ham, men sezaman.",
+      "Sen bilan oddiy suhbat ham ajoyib hikoyaga aylanadi.",
+      "Sen bilan gaplashsam, vaqt qanday o'tganini bilmay qolaman.",
+      "Sabring va aqling. Ikkalasi ham meni hayratda qoldiradi.",
+      "Eng oddiy kunni ham o'zgacha qilib qo'yasan.",
+      "Shunchaki sen bo'lganing uchun."
+    ];
+    var HEART_D = "M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z";
+    var flipped = 0;
+    var cardsBox = $("#cards");
+    REASONS.forEach(function (txt, i) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "card";
+      b.setAttribute("aria-pressed", "false");
+      b.setAttribute("aria-label", (i + 1) + "-sabab");
+      b.innerHTML = '<span class="inner"><span class="face front"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="' + HEART_D + '"/></svg><b>Sabab ' + (i + 1) + '</b></span><span class="face back"></span></span>';
+      $(".back", b).textContent = txt;
+      var seen = false;
+      b.addEventListener("click", function () {
+        var on = b.getAttribute("aria-pressed") !== "true";
+        b.setAttribute("aria-pressed", on ? "true" : "false");
+        if (on && !seen) {
+          seen = true;
+          flipped++;
+          $("#tally").textContent = flipped + " / " + REASONS.length + " sabab ochildi";
+          if (flipped === REASONS.length) $("#reasonDone").hidden = false;
+        }
+      });
+      cardsBox.appendChild(b);
+    });
+
+    /* Constellation */
+    var WISHES = [
+      "Har tong senga yaxshi kayfiyat bilan otsin.",
+      "Qalbing doim tinch bo'lsin.",
+      "Orzularing birin-ketin ushalsin.",
+      "Yuzingdan tabassum hech ketmasin.",
+      "Yo'lingda yorug' odamlar ko'p bo'lsin.",
+      "Charchaganingda suyanadigan yelkang bo'lsin. Men bor.",
+      "Sog'ligingga hech narsa tegmasin.",
+      "Kelajaging eng chiroyli kitobdek bo'lsin.",
+      "Seni xursand qiladigan hamma narsa sen tomon kelsin.",
+      "Dunyoda hech kim sening o'rningni bosa olmasin, chunki sen yagona.",
+      "Hech qachon o'zingni yolg'iz his qilma.",
+      "Bir kuni bu tilaklarni ko'zlaringga qarab, yuzma-yuz aytay."
+    ];
+    (function buildMap() {
+      var pts = [], k, svg;
+      for (k = 0; k < 12; k++) {
+        var t = (k + 0.5) * Math.PI * 2 / 12;
+        var X = 16 * Math.pow(Math.sin(t), 3);
+        var Y = 13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t);
+        pts.push([200 + X * 10.5, 150 - Y * 10.5]);
+      }
+      svg = '<svg class="sky-map" viewBox="0 0 400 350" role="group" aria-label="Yurak shaklidagi yulduz turkumi">';
+      for (k = 0; k < 42; k++) {
+        svg += '<circle cx="' + rand(8, 392).toFixed(1) + '" cy="' + rand(8, 342).toFixed(1) + '" r="' + rand(0.5, 1.4).toFixed(1) + '" fill="#fff" opacity="' + rand(0.22, 0.65).toFixed(2) + '"/>';
+      }
+      svg += '<polygon class="cline" points="' + pts.map(function (p) { return p[0].toFixed(1) + "," + p[1].toFixed(1); }).join(" ") + '"/>';
+      pts.forEach(function (p, i) {
+        var x = p[0].toFixed(1), y = p[1].toFixed(1);
+        svg += '<g class="star" tabindex="0" role="button" aria-label="Tilak ' + (i + 1) + '" data-i="' + i + '" style="animation-delay:' + (i * 0.2).toFixed(1) + 's">' +
+          '<circle class="hit" cx="' + x + '" cy="' + y + '" r="22"/>' +
+          '<circle class="glow" cx="' + x + '" cy="' + y + '" r="10" style="animation-delay:' + (i * 0.25).toFixed(2) + 's"/>' +
+          '<circle class="core" cx="' + x + '" cy="' + y + '" r="4.6"/>' +
+          '<circle class="ring" cx="' + x + '" cy="' + y + '" r="12"/></g>';
+      });
+      svg += "</svg>";
+      $("#map").innerHTML = svg;
+    })();
+    var seenWish = {}, seenCount = 0;
+    function openStar(g) {
+      var i = +g.getAttribute("data-i");
+      $$(".star").forEach(function (s) { s.classList.remove("on"); });
+      g.classList.add("on");
+      g.classList.add("seen");
+      $("#wishText").textContent = WISHES[i];
+      if (!seenWish[i]) {
+        seenWish[i] = true;
+        seenCount++;
+        $("#wishCount").textContent = seenCount + " / " + WISHES.length + " tilak o'qildi" + (seenCount === WISHES.length ? ". Turkum to'liq." : "");
+      }
+    }
+    $("#map").addEventListener("click", function (e) {
+      var g = e.target.closest ? e.target.closest(".star") : null;
+      if (g) openStar(g);
+    });
+    $("#map").addEventListener("keydown", function (e) {
+      if (e.key !== "Enter" && e.key !== " ") return;
+      var g = e.target.closest ? e.target.closest(".star") : null;
+      if (g) { e.preventDefault(); openStar(g); }
+    });
+
+    /* Game */
+    var gc = $("#game"), gx = gc.getContext("2d");
+    var GW = 0, GH = 0, gh = [], pops = [], score = 0, GOAL = 10, gRun = false, gLast = 0, gT = 0, spawn = 0, gRaf = 0;
+    function gSize() {
+      if (!gc) return;
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      var r = gc.getBoundingClientRect();
+      var w = r.width || gc.clientWidth || gc.offsetWidth || 320;
+      var h = r.height || gc.clientHeight || gc.offsetHeight || 328;
+      if (w < 10) w = 320;
+      if (h < 10) h = 328;
+      GW = w; GH = h;
+      gc.width = Math.round(GW * dpr);
+      gc.height = Math.round(GH * dpr);
+      gx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      drawGame(gT);
+    }
+    function hx(h, t) { return h.x + Math.sin((t / 1000) * 1.2 + h.ph) * h.sw; }
+    function drawGame(t) {
+      if (!GW || !GH) return;
+      gx.clearRect(0, 0, GW, GH);
+      gx.shadowBlur = 12;
+      for (var i = 0; i < gh.length; i++) {
+        var h = gh[i];
+        gx.fillStyle = h.c;
+        gx.shadowColor = h.c;
+        gx.globalAlpha = 0.95;
+        heartPath(gx, hx(h, t), h.y, h.s);
+        gx.fill();
+      }
+      gx.shadowBlur = 0;
+      for (var j = 0; j < pops.length; j++) {
+        var p = pops[j];
+        gx.globalAlpha = Math.max(0, p.life / 0.55);
+        gx.fillStyle = p.c;
+        gx.beginPath();
+        gx.arc(p.x, p.y, 3.5, 0, 6.283);
+        gx.fill();
+      }
+      gx.globalAlpha = 1;
+    }
+    function gFrame(t) {
+      if (!gRun) return;
+      var dt = Math.min(0.05, (t - gLast) / 1000 || 0.016);
+      gLast = t; gT = t;
+      spawn -= dt;
+      if (spawn <= 0) {
+        spawn = rand(0.38, 0.72);
+        var maxX = Math.max(50, GW - 30);
+        gh.push({
+          x: rand(30, maxX),
+          y: -35,
+          s: rand(22, 36),
+          vy: rand(75, 135),
+          sw: rand(6, 18),
+          ph: rand(0, 6.28),
+          c: pick(PALETTE)
+        });
+      }
+      for (var i = gh.length - 1; i >= 0; i--) {
+        gh[i].y += gh[i].vy * dt;
+        if (gh[i].y > GH + 50) gh.splice(i, 1);
+      }
+      for (var j = pops.length - 1; j >= 0; j--) {
+        var p = pops[j];
+        p.x += p.vx * dt;
+        p.y += p.vy * dt;
+        p.vy += 300 * dt;
+        p.life -= dt;
+        if (p.life <= 0) pops.splice(j, 1);
+      }
+      drawGame(t);
+      gRaf = requestAnimationFrame(gFrame);
+    }
+    function startGame() {
+      if (gRaf) cancelAnimationFrame(gRaf);
+      score = 0; gh = []; pops = []; gRun = true; spawn = 0.15;
+      $("#gameHud").textContent = "Tutilgan: 0 / " + GOAL;
+      var cover = $("#gameCover");
+      cover.hidden = true;
+      cover.style.display = "none";
+      gSize();
+      // layout keyin yana bir marta o'lcham olish
+      requestAnimationFrame(function () {
+        gSize();
+        gLast = performance.now();
+        gRaf = requestAnimationFrame(gFrame);
+      });
+    }
+    function winGame() {
+      gRun = false;
+      if (gRaf) cancelAnimationFrame(gRaf);
+      gh = [];
+      drawGame(gT);
+      $("#gameMsg").textContent = "Hammasini tutding. Lekin eng muhimini tutishing shart emas edi, chunki u allaqachon sening qo'lingda: yuragim.";
+      $("#gameStart").textContent = "Qayta o'ynash";
+      var cover = $("#gameCover");
+      cover.hidden = false;
+      cover.style.display = "";
+      if (!reduce) burst(W / 2, H * 0.5, 75);
+    }
+    function hitHeart(clientX, clientY) {
+      if (!gRun || !GW) return;
+      var r = gc.getBoundingClientRect();
+      var scaleX = GW / (r.width || GW);
+      var scaleY = GH / (r.height || GH);
+      var px = (clientX - r.left) * scaleX;
+      var py = (clientY - r.top) * scaleY;
+      for (var i = gh.length - 1; i >= 0; i--) {
+        var h = gh[i], cx = hx(h, gT);
+        var dist = Math.sqrt((px - cx) * (px - cx) + (py - h.y) * (py - h.y));
+        if (dist < h.s * 1.1 + 18) {
+          gh.splice(i, 1);
+          score++;
+          for (var k = 0; k < 10; k++) {
+            pops.push({
+              x: cx, y: h.y,
+              vx: rand(-140, 140), vy: rand(-180, 30),
+              life: 0.6, c: h.c
+            });
+          }
+          $("#gameHud").textContent = "Tutilgan: " + score + " / " + GOAL;
+          if (score >= GOAL) winGame();
+          break;
+        }
+      }
+    }
+    gc.addEventListener("pointerdown", function (e) {
+      e.preventDefault();
+      hitHeart(e.clientX, e.clientY);
+    });
+    // mobile touch fallback
+    gc.addEventListener("touchstart", function (e) {
+      if (!gRun) return;
+      e.preventDefault();
+      if (e.touches && e.touches[0]) {
+        hitHeart(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    }, { passive: false });
+    $("#gameStart").addEventListener("click", function (e) {
+      e.preventDefault();
+      startGame();
+    });
+
+    /* Dreams */
+    var DREAMS = [
+      "Birinchi marta yuzma-yuz ko'rishish",
+      "Birga tong otishini kutish",
+      "Xaritada bizning nuqtamizni topish: birga sayohat",
+      "Sen yoqtirgan taomni birga pishirish",
+      "Yomg'ir ostida shoshmasdan sayr qilish",
+      "Har yili shu kunga qaytib, bu sahifani qayta ochish",
+      "Qarigunimizcha qo'l ushlab yurish",
+      "Birga sevimli filmni tomosha qilish"
+    ];
+    var dreamOn = 0;
+    var dBox = $("#dreams");
+    DREAMS.forEach(function (txt) {
+      var li = document.createElement("li");
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "dream";
+      b.setAttribute("aria-pressed", "false");
+      b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="' + HEART_D + '"/></svg><span></span>';
+      $("span", b).textContent = txt;
+      b.addEventListener("click", function () {
+        var on = b.getAttribute("aria-pressed") !== "true";
+        b.setAttribute("aria-pressed", on ? "true" : "false");
+        dreamOn += on ? 1 : -1;
+        $("#meterBar").style.width = (dreamOn / DREAMS.length * 100) + "%";
+        $("#dreamTally").textContent = dreamOn + " / " + DREAMS.length + " orzu birga";
+        $("#dreamDone").hidden = dreamOn !== DREAMS.length;
+        if (on && !reduce) {
+          var r = b.getBoundingClientRect();
+          burst(r.left + 40, r.top + r.height / 2, 10);
+        }
+      });
+      li.appendChild(b);
+      dBox.appendChild(li);
+    });
+
+    /* Question */
+    var yesBtn = $("#ya"), noBtn = $("#no"), arena = $("#arena"), hint = $("#hint");
+    var dodges = 0;
+    var HINTS = [
+      "Yo'q tugmasi uyatchan ekan, qochib ketdi.",
+      "Ushlashga urinma, baribir ulgurmaysan.",
+      "To'g'ri javob bitta, Munisa.",
+      "Men kutaman. Shoshilmayman.",
+      "Ha tugmasi esa seni kutib turibdi."
+    ];
+    function dodge(e) {
+      if (e && e.preventDefault) e.preventDefault();
+      dodges++;
+      noBtn.classList.add("flying");
+      var ar = arena.getBoundingClientRect(), hr = yesBtn.getBoundingClientRect();
+      var bw = noBtn.offsetWidth, bh = noBtn.offsetHeight;
+      var yl = hr.left - ar.left, yt = hr.top - ar.top, yr = yl + hr.width, yb = yt + hr.height;
+      var x = 0, y = 0, ok = false;
+      for (var t = 0; t < 40 && !ok; t++) {
+        x = Math.random() * Math.max(0, ar.width - bw);
+        y = Math.random() * Math.max(0, ar.height - bh);
+        ok = x + bw < yl - 14 || x > yr + 14 || y + bh < yt - 14 || y > yb + 14;
+      }
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+      yesBtn.style.setProperty("--grow", Math.min(1 + dodges * 0.1, 1.55));
+      noBtn.style.setProperty("--shrink", Math.max(1 - dodges * 0.07, 0.55));
+      hint.textContent = HINTS[Math.min(dodges - 1, HINTS.length - 1)];
+    }
+    noBtn.addEventListener("pointerenter", dodge);
+    noBtn.addEventListener("pointerdown", dodge);
+    noBtn.addEventListener("click", dodge);
+
+    yesBtn.addEventListener("click", function () {
+      arena.hidden = true;
+      hint.hidden = true;
+      var th = $("#thanks");
+      th.hidden = false;
+      celebrate();
+      th.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
+    });
+
+    /* Copy + Netlify form (faqat matn) */
+    $("#copy").addEventListener("click", function () {
+      var ta = $("#reply"), note = $("#copied");
+      function done() { note.textContent = "Nusxalandi. Endi Aza'ga yuboring."; }
+      function fallback() {
+        ta.focus(); ta.select();
+        try { document.execCommand("copy"); done(); }
+        catch (err) { note.textContent = "Matnni belgilab, nusxa oling."; }
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(ta.value).then(done, fallback);
+      } else fallback();
+    });
+
+    var form = $("#replyForm");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var btn = $("#submitBtn");
+      btn.disabled = true;
+      btn.textContent = "Yuborilmoqda...";
+
+      var message = ($("#reply") && $("#reply").value || "").trim();
+      if (!message) {
+        btn.disabled = false;
+        btn.textContent = "Yuborish";
+        $("#copied").textContent = "Avval javob yozing.";
+        return;
+      }
+
+      // Telegram bot orqali yuborish (Netlify Function)
+      fetch("/.netlify/functions/telegram-reply", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: message })
+      })
+      .then(function (res) {
+        return res.json().then(function (data) {
+          if (!res.ok) {
+            var msg = (data && data.error) ? data.error : ("Xato " + res.status);
+            if (data && data.details) msg += " — " + data.details;
+            throw new Error(msg);
+          }
+          return data;
+        });
+      })
+      .then(function () {
+        form.hidden = true;
+        $("#formSuccess").hidden = false;
+        celebrate();
+      })
+      .catch(function (err) {
+        btn.disabled = false;
+        btn.textContent = "Yuborish";
+        $("#copied").textContent = (err && err.message) ? err.message : "Xatolik. Nusxalab Telegramda yuboring.";
+      });
+    });
+
+    /* Start */
+    window.addEventListener("resize", resize);
+    resize();
+    if (!reduce) requestAnimationFrame(frame);
+  })();
+  </script>
+</body>
+</html>
