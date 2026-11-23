@@ -1,0 +1,8 @@
+{
+  "name": "munisa-romantic-atelier",
+  "version": "5.0.0",
+  "private": true,
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  }
+}
